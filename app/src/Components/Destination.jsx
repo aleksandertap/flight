@@ -20,7 +20,7 @@ const Destination = () => {
         <option value="">Vali sihtkoht</option>
         <option value="Amsterdam">Amsterdam</option>
         <option value="Antalya">Antalya</option>
-        <option value="Bahrain">Bahrain</option>
+        <option value="Riia">Riia</option>
       </select>
       {showDate && <FlightDate selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>}
     </div>
