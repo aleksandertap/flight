@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import FlightDate from "./FlightDate.jsx";
 const Destination = () => {
   const [showDate, setShowDate] = useState(false)
+  const [selectedDate, setSelectedDate] = useState("")
   const destinationChangeHandler = (event) => {
     if(event.target.value !== ""){
         setShowDate(true)
+        setSelectedDate("")
     }
     else{
         setShowDate(false)
@@ -20,7 +22,7 @@ const Destination = () => {
         <option value="Antalya">Antalya</option>
         <option value="Bahrain">Bahrain</option>
       </select>
-      {showDate && <FlightDate/>}
+      {showDate && <FlightDate selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>}
     </div>
   );
 };
